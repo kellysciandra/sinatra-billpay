@@ -1,0 +1,15 @@
+<p>Name: <%= @bill.name %></p>
+<p>Due Date: <%= @bill.due_date %></p>
+<p>Monthly Payment: <%= @bill.payment %></p>
+<p>Category: <%= @bill.type.category %></p>
+
+<br /><br />
+
+<p>
+  <a href="/bills/<%= @bill.id %>/edit">Edit</a>
+</p>
+
+<form action="/bills/<%= @bill.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

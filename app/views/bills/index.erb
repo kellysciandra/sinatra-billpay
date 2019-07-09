@@ -1,0 +1,20 @@
+<h2>Bills</h2>
+
+<p class="bills_menu"><a href="/bills/user/<%= current_user.id %>">Your Bills</a></p>
+
+<ul>
+  <% @bills.each do |bill| %>
+    <li>
+      <span class="bill_name"><%= bill.name %></span>
+      <br />
+      <span class="bill_due_date"><%= bill.due_date %></span>
+      <br />
+      <span class="bill_payment"><%= bill.payment %></span>
+      <br />
+      category -
+      <span class="bill_category"><%= bill.type.category %></span>
+
+      <% if bill.user_id == @user.id %><a href="/bills/<%= bill.id %>">Details</a><% end %>
+    </li>
+  <% end %>
+</ul>

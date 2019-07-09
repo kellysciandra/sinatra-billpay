@@ -1,0 +1,4 @@
+class TypesController < ApplicationController
+
+
+end

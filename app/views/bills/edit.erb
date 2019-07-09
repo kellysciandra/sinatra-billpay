@@ -1,0 +1,21 @@
+<h2>Edit Your Bill</h2>
+
+<form method="post" action="/bills/<%= @bill.id %>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label>Name:</label> <input type="text" name="name" value="<%= @bill.name %>" />
+  <br /><br />
+
+  <label>Due Date:</label> <input type="test" name="due_date" value="<%= @bill.due_date %>"/>
+
+  <br /><br />
+
+  <label>Monthly Payment:</label> <input type="text" name="payment" value="<%= @bill.payment %>"></input>
+
+  <br /><br />
+
+  <label>Bill Category:</label> <input type="text" name="type[category]" value="<%= @bill.type.category %>"></input>
+
+  <br /><br /><br />
+  <input type="submit" value="Submit Changes">
+</form>

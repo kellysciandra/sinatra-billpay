@@ -1,0 +1,25 @@
+<h2>Add a Bill</h2>
+
+<% if flash.has?(:message) %>
+  <span class="flash"><%= flash[:message] %></span><br /><br />
+<% end %>
+
+<form method="post" action="/bills">
+
+  <label>Name:</label> <input size="25" type="test" name="name" placeholder="'rent', 'amex', etc.'"/>
+
+  <br /><br />
+
+  <label>Due Date:</label> <input type="text" name="due_date" placeholder="25th of the month" />
+
+  <br /><br />
+
+  <label>Monthly Payment:</label> <input type="text" name="payment" placeholder="xxx.xx"></input>
+
+  <br /><br />
+
+  <label>Bill Category:</label> <input type="text" name="type[category]" placeholder="'car', 'credit card', etc."></input>
+
+  <br /><br /><br />
+  <input type="submit" value="Add">
+</form>
