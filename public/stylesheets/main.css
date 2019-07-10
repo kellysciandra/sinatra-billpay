@@ -11,11 +11,59 @@
     width: 100%;
   }
 
+  header {
+    margin: 16px auto;
+    max-width: 960px;
+    width: 85%;
+  }
+
+  #title {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .bills_menu a:link {
+    font-size: .8em;
+    color: #166667;
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .bills_menu a:visited {
+    color: #166667;
+  }
+
+  .flash {
+    color: red;
+  }
+
+  nav {
+    float:right;
+  }
+
+  li {
+    padding:0px 0px 20px 0px;
+  }
+
+  li .bill_name {
+    font-size:.8em;
+  }
+
+  li .bill.type.category {
+    font-size:.8em;
+  }
+
+  li a {
+    font-size:.8em;
+  }
+
   /* --- Welcome Page Styles --- */
   body {
     background-color: lightblue;
     color: #333;
-    font-family: Sans-Serif;
+    font-family: Courier ;
     line-height: 18px;
   }
 
@@ -57,19 +105,7 @@
 
   .content {
     float: left;
-    width: 60%; /* 480px / 800px */
-  }
-
-  .sidebar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-  }
-
-  .sidebar ul {
-    font-size: 14px;
+    width: 70%; /* 480px / 800px */
   }
 
   .branding {
@@ -89,18 +125,6 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     width: auto;
-  }
-
-  .content, .sidebar {
-    float: none;
-    width: 100%;
-  }
-
-  .sidebar {
-    background: transparent;
-    border: none;
-    border-top: 2px solid #ccc;
-    padding: 0;
   }
 
   h1 {

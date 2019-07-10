@@ -1,3 +1,5 @@
+
+
 class User < ActiveRecord::Base
   has_many :bills
   has_many :types, through: :bills
