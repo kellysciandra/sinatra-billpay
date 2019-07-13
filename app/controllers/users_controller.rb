@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     erb :'users/signup'
   end
 
+  #action displays validation message to user when form filled out incorrectly 
+
   post '/signup' do
     if params[:username] == "" || params[:email] == "" || params[:password] == ""
       flash[:message] = "Please complete all fields."
@@ -14,8 +16,6 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect to '/bills'
     end
-
-
   end
 
   get '/login' do

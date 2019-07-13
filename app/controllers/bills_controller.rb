@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
 
+  #index action
   get '/bills' do
     if !logged_in?
       redirect to '/'
@@ -25,6 +26,7 @@ class BillsController < ApplicationController
     end
   end
 
+  #new action
   get '/bills/new' do
     if !logged_in?
       redirect to '/login'
@@ -33,6 +35,8 @@ class BillsController < ApplicationController
     end
   end
 
+  #create action
+  #displays validation message to user when fields not completed
   post '/bills' do
     @bill = Bill.create(name: params[:name], due_date: params[:due_date], payment: params[:payment])
     @bill.user = current_user
@@ -45,6 +49,7 @@ class BillsController < ApplicationController
     end
   end
 
+  #show action
   get '/bills/:id' do
     if !logged_in?
       redirect to '/login'
@@ -54,6 +59,7 @@ class BillsController < ApplicationController
     end
   end
 
+  #edit action
   get '/bills/:id/edit' do
     if !logged_in?
       redirect to '/login'
@@ -67,6 +73,7 @@ class BillsController < ApplicationController
     end
   end
 
+  #update action
   post '/bills/:id' do
   @bill = Bill.find(params[:id])
   @bill.update(name: params[:name], due_date: params[:due_date], payment: params[:payment])
@@ -78,6 +85,7 @@ class BillsController < ApplicationController
   end
 end
 
+  #delete action
 post'/bills/:id/delete' do
   if !logged_in?
     redirect to '/login'
